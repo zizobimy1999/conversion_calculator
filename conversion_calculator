@@ -1,0 +1,147 @@
+# Conversion Calculator Program
+
+def binary_to_decimal(binary_num):
+    decimal_num = 0
+    power = 0
+    for digit in reversed(binary_num):
+        if digit == '1':
+            decimal_num += 2 ** power
+        elif digit != '0':
+            print("Not a binary number!")
+            return None
+        power += 1
+    return decimal_num
+
+def decimal_to_binary(decimal_num):
+    if decimal_num == 0:
+        return '0'
+    binary_num = ''
+    while decimal_num > 0:
+        binary_num = str(decimal_num % 2) + binary_num
+        decimal_num //= 2
+        return binary_num
+
+def hexadecimal_to_decimal(hex_num):
+    # Placeholder message for option 3
+    print("Not coded yet!")
+    return None
+
+def decimal_to_hexadecimal(decimal_num):
+    # Placeholder message for option 4
+    print("Not coded yet!")
+    return None
+
+def hexadecimal_to_binary(hex_num):
+    # Placeholder message for option 5
+    print("Not coded yet!")
+    return None
+
+def binary_to_hexadecimal(binary_num):
+    # Placeholder message for option 6
+    print("Not coded yet!")
+    return None
+
+def octal_to_decimal(octal_num):
+    # Placeholder message for option 7
+    print("Not coded yet!")
+    return None
+
+def decimal_to_octal(decimal_num):
+    # Placeholder message for option 8
+    print("Not coded yet!")
+    return None
+
+# Main function
+def main():
+    print("This program converts numbers!")
+
+    while True:
+        print("\nChoose the following conversion")
+        print("(1) binary to decimal")
+        print("(2) decimal to binary")
+        print("(3) hexadecimal to decimal")
+        print("(4) decimal to hexadecimal")
+        print("(5) hexadecimal to binary")
+        print("(6) binary to hexadecimal")
+        print("(7) octal to decimal")
+        print("(8) decimal to octal")
+
+        selection = input("Enter a valid selection ('q' to quit): ").lower()
+
+        if selection == 'q':
+            print("Exiting the program. Goodbye!")
+            break
+
+        if selection not in ('1', '2', '3', '4', '5', '6', '7', '8'):
+            print("Invalid input")
+            continue
+
+        if selection == '3':
+            print("Not coded yet!")
+            continue
+        elif selection == '4':
+            print("Not coded yet!")
+            continue
+        elif selection == '5':
+            print("Not coded yet!")
+            continue
+        elif selection == '6':
+            print("Not coded yet!")
+            continue
+        elif selection == '7':
+            print("Not coded yet!")
+            continue
+        elif selection == '8':
+            print("Not coded yet!")
+            continue
+
+        num_input = input(f"Enter the number to convert (default 11): ").strip()
+
+        if not num_input:
+            print("No number provided. Please try again.")
+            continue
+
+        if selection == '1':
+            decimal_num = 0
+            power = 0
+            for digit in reversed(num_input):
+                if digit == '1':
+                    decimal_num += 2 ** power
+                elif digit != '0':
+                    print("Not a binary number!")
+                    break
+                power += 1
+            else:
+                print(f"You asked to convert {num_input} from binary to decimal")
+                print(f"{num_input} from binary to decimal = {decimal_num}")
+        elif selection == '2':
+            decimal_num = int(num_input)
+            if decimal_num == 0:
+                binary_num = '0'
+            else:
+                binary_num = ''
+                while decimal_num > 0:
+                    binary_num = str(decimal_num % 2) + binary_num
+                    decimal_num //= 2
+            print(f"You asked to convert {num_input} from decimal to binary")
+            print(f"{num_input} from decimal to binary = {binary_num}")
+        elif selection == '3':
+            print("Not coded yet!")
+        elif selection == '4':
+            print("Not coded yet!")
+        elif selection == '5':
+            print("Not coded yet!")
+        elif selection == '6':
+            print("Not coded yet!")
+        elif selection == '7':
+            print("Not coded yet!")
+        elif selection == '8':
+            print("Not coded yet!")
+
+        user_input = input("Hit Enter to Continue or 'q' to Quit: ").lower()
+        if user_input == 'q':
+            print("Exiting the program. Goodbye!")
+            break
+
+if __name__ == "__main__":
+    main()
